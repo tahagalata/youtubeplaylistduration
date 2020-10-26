@@ -1,0 +1,32 @@
+@import './variables.scss'; 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap');
+
+body {
+  font-family: 'Mulish', sans-serif;
+}
+
+.section {
+  padding: 90px 60px;
+
+  @include respond(tab-port) {
+    padding: 40px 60px;
+  }
+
+  @include respond(phone) {
+    padding: 40px;
+  }
+
+  @include respond(phone-xs) {
+    padding: 40px 30px ;
+  }
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 48px;
+}
