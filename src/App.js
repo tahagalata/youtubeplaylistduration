@@ -1,8 +1,13 @@
 import './App.scss';
+import Header from './components/header/header'
+import UrlInput from './components/urlInput/urlInput'
 
 function App() {
   return (
-    <h1>Hello</h1>
+    <>
+    <Header />
+    <UrlInput />
+    </>
   );
 }
 
