@@ -11,24 +11,12 @@ export default function UrlInput() {
             <input 
               type="text"
               id ="url"
-              placeholder="Playlist Url" />
+              placeholder="Paste Playlist URL, Playlist ID or Playlist Video URL" />
             <button
               className="submit"
             >
               Get the Duration
-            </button>
-            <div className="select-div">
-              <select id="start">
-                <option value="">
-                  Start
-                </option>
-              </select>
-              <select id ="finish">
-                <option value="">
-                  Finish
-                </option>
-              </select>
-            </div>            
+            </button>      
           </form>
         </div>
     </section>
