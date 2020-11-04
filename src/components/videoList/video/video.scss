@@ -5,7 +5,10 @@
 }
 
 .video-thumb {
-  width: 320px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 266px;
   height: 180px;
   flex-shrink: 0;
   margin-right: 20px;
