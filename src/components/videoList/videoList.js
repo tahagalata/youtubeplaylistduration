@@ -2,7 +2,16 @@ import React from 'react'
 import './videoList.scss'
 import Video from './video/video'
 
-export default function VideoList() {
+export default function VideoList({videos}) {
+  const videosArray = videos.map(({title, channelTitle, thumbnailUrl}) => (
+    <Video
+      key= {title}
+      title = {title}
+      channelTitle= {channelTitle}
+      thumbnailUrl={thumbnailUrl}
+    />
+  ))
+
   return (
     <section className="section video-list-section">
       <div className="container">
@@ -10,7 +19,7 @@ export default function VideoList() {
           Click on videos to exclude / include
         </p>
         <div id='video-list'>
-          <Video />
+          {videosArray}
         </div>
       </div>
     </section>

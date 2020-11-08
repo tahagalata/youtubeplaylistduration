@@ -1,19 +1,19 @@
 import React from 'react'
 import './video.scss'
 
-export default function Video() {
+export default function Video({title, channelTitle, thumbnailUrl}) {
   return (
     <div className="video">
       <div 
         className="video-thumb"
         style={{
-          backgroundImage: 'url("https://i.ytimg.com/vi/DJ7DoGoU9E0/mqdefault.jpg")'
+          backgroundImage: `url(${thumbnailUrl})`
         }}
       >
       </div>
       <div>
-      <p className="video-title">Lineer Cebir : Lineer Denklem Sistemleri ve Matrisler ile Gösterimi (www.buders.com)</p>
-      <p className="video-channel">BUders Boğaziçiliden Özel Ders</p>
+      <p className="video-title">{title}</p>
+      <p className="video-channel">{channelTitle}</p>
       </div>
     </div>
   )
