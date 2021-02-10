@@ -2,13 +2,16 @@ import React from 'react'
 import './videoList.scss'
 import Video from './video/video'
 
-export default function VideoList({videos}) {
-  const videosArray = videos.map(({title, channelTitle, thumbnailUrl}) => (
+export default function VideoList({videos, handleExclude}) {
+  const videosArray = videos.map(({index, excluded, title, channelTitle, thumbnailUrl}) => (
     <Video
-      key= {title}
+      key= {index}
+      index = {index}
+      excluded = {excluded}
       title = {title}
       channelTitle= {channelTitle}
       thumbnailUrl={thumbnailUrl}
+      handleExclude = {handleExclude}
     />
   ))
 

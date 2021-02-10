@@ -1,13 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './video.scss'
 
-export default function Video({title, channelTitle, thumbnailUrl}) {
-  const [excluded, toggleExcluded] = useState(false)
-
-  const handleClick = (event) => {
-    console.log(event.target)
-    toggleExcluded(!excluded)
-  }
+export default function Video({index, excluded, title, channelTitle, thumbnailUrl, handleExclude}) {
 
   return (
     <div 
@@ -15,7 +9,7 @@ export default function Video({title, channelTitle, thumbnailUrl}) {
       style= {{
         opacity: excluded ? '0.4' : '1'
       }}
-      onClick= {handleClick}
+      onClick= {()=> handleExclude(index)}
     >
       <div 
         className="video-thumb"
