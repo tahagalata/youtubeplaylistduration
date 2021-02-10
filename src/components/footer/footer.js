@@ -4,7 +4,7 @@ import './footer.scss'
 export default function Footer() {
   return (
     <footer id='footer'>
-      <h2 id='footer-text'>Built By <span class='red'>Taha Galata</span></h2>
+      <h2 id='footer-text'>Built By <span className='red'>Taha Galata</span></h2>
     </footer>
   )
 }
