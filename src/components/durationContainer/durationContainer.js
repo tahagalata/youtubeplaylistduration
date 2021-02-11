@@ -7,7 +7,7 @@ export default function DurationContainer({videos}) {
   let totalDuration = videos.reduce((acc, curr) => acc + (curr.excluded ? 0 : curr.duration), 0)
 
   return (
-    <>
+    <div className='duration-container'>
       <Duration 
         speed = '1'
         totalDuration = {totalDuration}
@@ -32,6 +32,6 @@ export default function DurationContainer({videos}) {
         speed = '2'
         totalDuration = {totalDuration}
       />
-    </>    
+    </div>    
   )
 }

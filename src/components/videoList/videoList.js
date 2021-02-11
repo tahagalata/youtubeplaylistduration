@@ -16,15 +16,13 @@ export default function VideoList({videos, handleExclude}) {
   ))
 
   return (
-    <section className="section video-list-section">
-      <div className="container">
-        <p id="video-list-paragraph">
-          Click on videos to exclude / include
-        </p>
-        <div id='video-list'>
-          {videosArray}
-        </div>
+    <div>
+      <p id="video-list-paragraph">
+        Click on videos to exclude / include
+      </p>
+      <div id='video-list'>
+        {videosArray}
       </div>
-    </section>
+    </div>
   )
 }
