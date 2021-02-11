@@ -3,7 +3,8 @@ import './durationContainer.scss'
 import Duration from './duration/duration'
 
 export default function DurationContainer({videos}) {
-  const totalDuration = videos.reduce((acc, curr) => acc + curr.duration, 0)
+  
+  let totalDuration = videos.reduce((acc, curr) => acc + (curr.excluded ? 0 : curr.duration), 0)
 
   return (
     <>

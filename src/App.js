@@ -2,9 +2,8 @@ import React, {useState} from 'react'
 import './App.scss';
 import Header from './components/header/header'
 import UrlInput from './components/urlInput/urlInput'
-import VideoList from './components/videoList/videoList'
 import addIndexAndExcluded from './utilities/videosArrayFunc'
-import DurationContainer from './components/durationContainer/durationContainer'
+import BottomSection from './components/bottomSection/bottomSection'
 
 function App() {
   const [videos, setVideos] = useState("none")
@@ -29,8 +28,11 @@ function App() {
     <Header />
     <UrlInput setVideos= {handleVideos}/>
     {videos !== "none" && 
-    <VideoList videos={videos} handleExclude={handleExclude}/>}
-    {videos !== "none" && <DurationContainer videos={videos}/>}
+      <BottomSection 
+        videos={videos}
+        handleExclude= {handleExclude} 
+      />
+    }
     </>
   );
 }
