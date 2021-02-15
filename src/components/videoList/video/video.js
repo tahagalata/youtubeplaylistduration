@@ -1,7 +1,10 @@
 import React from 'react'
 import './video.scss'
+import {secondsToShortString} from '../../../utilities/durationFunc'
 
-export default function Video({index, excluded, title, channelTitle, thumbnailUrl, handleExclude}) {
+export default function Video({index, excluded, title, channelTitle, thumbnailUrl, handleExclude, duration}) {
+
+  const durationText = secondsToShortString(duration)
 
   return (
     <div 
@@ -18,6 +21,7 @@ export default function Video({index, excluded, title, channelTitle, thumbnailUr
           backgroundImage: `url(${thumbnailUrl})`
         }}
       >
+        <p className='video-duration'>{durationText}</p>
       </div>
       <div>
       <p className="video-title">{title}</p>

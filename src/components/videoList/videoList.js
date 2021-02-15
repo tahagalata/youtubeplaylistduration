@@ -3,7 +3,7 @@ import './videoList.scss'
 import Video from './video/video'
 
 export default function VideoList({videos, handleExclude}) {
-  const videosArray = videos.map(({index, excluded, title, channelTitle, thumbnailUrl}) => (
+  const videosArray = videos.map(({index, excluded, title, channelTitle, thumbnailUrl, duration}) => (
     <Video
       key= {index}
       index = {index}
@@ -12,6 +12,7 @@ export default function VideoList({videos, handleExclude}) {
       channelTitle= {channelTitle}
       thumbnailUrl={thumbnailUrl}
       handleExclude = {handleExclude}
+      duration = {duration}
     />
   ))
 
