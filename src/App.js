@@ -6,7 +6,7 @@ import addIndexAndExcluded from './utilities/videosArrayFunc'
 import BottomSection from './components/bottomSection/bottomSection'
 
 function App() {
-  const [videos, setVideos] = useState("none")
+  const [videos, setVideos] = useState(false)
   
   const handleVideos = (videoArray) => {
     const newList= addIndexAndExcluded(videoArray)
@@ -27,7 +27,7 @@ function App() {
     <>
     <Header />
     <UrlInput setVideos= {handleVideos}/>
-    {videos !== "none" && 
+    {videos !== false && 
       <BottomSection 
         videos={videos}
         handleExclude= {handleExclude} 
